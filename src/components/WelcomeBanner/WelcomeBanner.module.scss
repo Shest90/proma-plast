@@ -1,0 +1,150 @@
+@use "../../styles/colors";
+.welcomeSection {
+  text-align: center;
+  padding: 6rem 2rem;
+  background-color: colors.$backgroundBanner;
+}
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+.banner {
+  width: 100%;
+}
+.sectionRight {
+  display: grid;
+  max-width: 100%;
+  padding: 0 2rem;
+  justify-items: center;
+  gap: 3rem;
+}
+.sectionRight h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sectionRight p {
+  font-size: 1.25rem;
+  line-height: 2.75rem;
+  color: #fff;
+}
+.containerCard {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin: 10rem auto;
+  gap: 1rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  opacity: 0;
+  transform: translateX(6rem);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.appear {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromRight 0.8s ease forwards;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(6rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cardTitle {
+  font-size: 2.25rem;
+  font-weight: bold;
+  border: 5px solid colors.$textColor1;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  padding-top: 3.75rem;
+  background-color: #fff;
+}
+.cardInfo {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #fff;
+}
+.window,
+.factory {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  top: -1.56rem;
+}
+@media screen and (max-width: 768px) {
+  .sectionRight h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 0.1rem;
+  }
+  .sectionRight p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .containerCard {
+    max-width: 1180px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 5rem auto;
+    gap: 1rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .appear {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInRight 0.8s ease forwards;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+@media screen and (max-width: 420px) and (min-width: 380px) {
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .containerCard {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin: 5rem auto;
+    gap: 1rem;
+  }
+}

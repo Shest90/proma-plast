@@ -1,0 +1,137 @@
+@use "../../styles/colors";
+.container {
+  max-width: 74rem;
+  margin: 0 auto;
+}
+.responsiveContainer {
+  max-width: 100%;
+  padding: 0 20px;
+}
+.priceTitle {
+  margin: 40px;
+  text-align: center;
+  font-size: 56px;
+  line-height: 66px;
+  font-weight: bold;
+}
+.priceImgWrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+.responsiveImgWrap {
+  margin: 20px 0;
+}
+.priceImg {
+  max-width: 154px;
+  width: 100%;
+  height: auto;
+}
+.iksweb {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.iksweb td,
+.iksweb th {
+  border: 1px solid colors.$textColor2;
+  padding: 8px;
+  text-align: left;
+  color: colors.$textColor1;
+}
+
+.iksweb th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.iksweb tr:first-child {
+  font-weight: bold;
+}
+
+.iksweb tr td:first-child {
+  font-weight: bold;
+}
+.priceImg2 {
+  max-width: 235px;
+  width: 100%;
+  height: auto;
+}
+.priceImgWrap2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+.priceImg3 {
+  max-width: 328px;
+  width: 100%;
+  height: auto;
+}
+.priceImg4 {
+  max-width: 580px;
+  width: 100%;
+  height: 140px;
+}
+.priseTableWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // align-items: end;
+}
+.priceTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.priceImg5 {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+}
+.titleDoor {
+  text-align: center;
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid colors.$textColor2;
+}
+.doorImgWrap {
+  display: flex;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid colors.$textColor2;
+  justify-content: space-evenly;
+  overflow-y: auto;
+}
+.doorImg {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+.responsivePriceTable {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.ikswebTableContainer {
+  max-height: 400px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 420px) and (min-width: 380px) {
+  .priseTableWrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+  }
+  .priceTitle {
+    margin: 40px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+}
